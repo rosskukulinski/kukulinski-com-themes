@@ -1,0 +1,60 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+
+
+{{! The big featured header }}
+<header class="main-header {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+
+
+    <div class="vertical">
+        <div class="main-header-content inner">
+            {{#if @blog.logo}}
+            <div class="blog-logo">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+            </div>
+            {{/if}}
+            <!-- <h1 class="page-title">{{@blog.title}}</h1> -->
+            <h2 class="page-description">{{@blog.description}}</h2>
+            {{navigation}}
+            {{> "social_link"}}
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+
+<main class="content" role="main">
+  <article class="post page">
+  <header class="post-header">
+  <h1 style="text-align: center;font-size: 5rem;letter-spacing: -2px;text-indent: -3px;" class="post-title">About me</h1>
+  </header>
+  <section class="post-content">
+  <p>Hi there! My name is Ross Kukulinski, and I am a relentlessly enthusiastic engineer, entrepreneur, mentor, and consultant.
+  </p>
+  <p>
+    <a href="" onclick="Calendly.showPopupWidget('https://calendly.com/rosskukulinski/free-30min-consult');return false;" class="home-consult-cta">Schedule a free 30 minute consultation</a>
+  </p>
+  <img class="ross-about-me" src="{{asset "img/ross-aboutme.jpg"}}"></img>
+  <p>My background is in architecting, developing, and deploying scalable, containerized, real-time cloud applications. While I'm constantly evaluating and experimenting with the latest technical innovations, my current go-to tech stack includes Node.js, Docker, Kubernetes, and CoreOS.</p>
+  <p>I am currently working as a <a href="/consulting">consultant</a>, educator, and entrepreneur on anything related to Cloud-Native, but I mainly focus on <a href="http://kubernetes.io">Kubernetes</a> and its ongoing revolution of application deployment.</p>
+  <p>Previously, I led Product for <a href="https://nodesource.com">NodeSource</a>, building the only commercially available Node.js platform. Prior to NodeSource, I was Founder/CEO of ASTi Labs and then <a href="https://angel.co/yodlr">Yodlr</a>, a WebRTC spinoff out of <a href="http://asti-usa.com">Advanced Simulation Technologies, Inc</a>.</p>
+  <p>I'm a member of the Node.js Foundation Evangelism Working Group and have published an O’Reilly Video Tutorial, <a href="http://shop.oreilly.com/product/0636920042686.do">Introduction to CoreOS: <em>Learn to Deploy, Monitor, and Scale Containerized Applications</em></a>.</p>
+  <p>I have a BS in Electrical and Computer Engineering from Carnegie Mellon. When I'm not working, I'm exploring the world with my amazing <a href="https://twitter.com/nicolehallinen">wife</a>.</p>
+  <hr/>
+  <h2 id="inthenews">In the News</h2>
+  <p>Every once and a while, my name pops up in the media. Here's some of the articles that mention me.</p>
+  <ul>
+  <li>BB&amp;N Bulletin - Young alumni/ae innovate in the technology sphere - December 2016</li>
+  <li>Node.js Foundation - <a href="https://www.youtube.com/watch?v=HlmzOyUiXl8">Node.js + Containers = Magic for Startups and Enterprises</a> - November 2016</li>
+  <li>The New Stack - <a href="http://thenewstack.io/nodesource-offers-one-click-deployment-node-js-across-kubernetes/">NodeSource Packages its Commercial Node.js Software for Kubernetes Clusters</a> - July 2016</li>
+  <li>InfoWorld - <a href="http://www.infoworld.com/article/3099947/javascript/nodesource-kubernetes-team-up-for-better-app-deployment-security.html">NodeSource, Kubernetes team up for better app deployment, security</a> - July 2016</li>
+  <li>Technically Philly - <a href="https://technical.ly/philly/2015/11/30/ross-kukulinski-yodlr/">Meet startup founder Ross Kukulinski, who’s leaving Silicon Valley for Philly</a> - November 2015</li>
+  <li>PlayfulInquiry.com - <a href="http://www.playfulinquiry.com/2012/08/an-interview-with-ross-kukulinski.html">Serious Games Interview</a> - August 2012</li>
+  </ul>
+  </section>
+  </article>
+</main>
